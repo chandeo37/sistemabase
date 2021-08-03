@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #FF5733 ;">
+  <a class="navbar-brand" href="/">Sistema Base</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Inicio</a>
+       
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#">Nosotros</a>
+     
+    </li>
+    </ul>
+    <ul class="my-2 my-lg-0">
+      <li class="nav-item">
+        <%= link_to "Logout", logout_path(), :method => :delete %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="header">
+  <h4>Hola <%= current_user.nombre %>!!</h4>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md" id="section">
+      <h1>Nombre: <%= current_user.nombre %> <%= current_user.apellido %></h1>
+      <h4>Seccion 1</h4>
+      <figure class="figure">
+          <img src="C:\etnico\fundamentosRails\sistemabase\hola.jpg" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+    </figure>
+      <br>
+      <h4>Seccion 2</h4>
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+      <span><%= flash[:errors] %></span>
+      <br>
+    </div>
+  </div>
+</div>
